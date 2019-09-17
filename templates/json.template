@@ -4,6 +4,13 @@
 		"size": {"w":{{width}},"h":{{height}}},
 		"scale": "1"
 	},
+	"animations": {
+	{{#animations}}
+		"{{{name}}}": [
+			{{#frames}}"{{{name}}}"{{^isLast}},{{/isLast}}{{/frames}}
+		]{{^isLast}},{{/isLast}}
+	{{/animations}}
+	},
 	"frames": {
 	{{#files}}
 		"{{{name}}}{{extension}}":
